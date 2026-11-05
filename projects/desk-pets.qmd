@@ -21,7 +21,7 @@ Around the same time, I had two 8-month-old kittens, Layla and Chico, and I want
 :::
 
 That idea became **DeskPets**: **a light, modular, interactive telemetry app where my two cats tell me how my computer is feeling.**
-
+![DeskPets](../art/assets/img/pets_showcase.gif){fig-alt="Layla and Chico desktop pets reacting to live system load" .project-image .lightbox}
 
 ## What I Built
 
