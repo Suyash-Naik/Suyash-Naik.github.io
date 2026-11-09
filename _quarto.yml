@@ -15,8 +15,8 @@ website:
     left:
       - text: "Home"
         href: index.qmd
-      - text: "Projects"
-        href: projects/index.qmd
+
+      - sidebar:projects
       - text: "CV"
         href: cv.qmd
       - text: "Art"
@@ -31,6 +31,18 @@ website:
       - icon: twitter
         href: https://twitter.com/SuyashNaik6
         aria-label: Twitter
+
+  sidebar:
+    - id: projects
+      title: "Projects"
+      style: docked
+      contents:
+        - text: "All projects"
+          href: projects/index.qmd
+        - text: "Efficiency Pipeline"
+          href: projects/efficiency-pipeline.qmd
+        - text: "DeskPets docs"
+          href: https://suyashnaik.com/DeskPets/
 
   page-footer:
     center: "© 2026 Suyash Naik · Built with [Quarto](https://quarto.org)" 
