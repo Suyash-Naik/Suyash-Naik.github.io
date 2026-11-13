@@ -11,3 +11,23 @@ update-index = "python scripts/update_index.py"
 [dependencies]
 python = ">=3.11"
 pyyaml = ">=6.0"
+
+# ---------------------------------------------------------------------------
+# `docs` feature: previewing and rendering the site (Quarto).
+# ---------------------------------------------------------------------------
+# Its own environment, so the default one (used by the update-index CI job) stays small.
+# Quarto only; add python + jupyter here if a page ever executes code.
+[feature.docs.dependencies]
+quarto = "*"
+
+[feature.docs.tasks.preview]
+cmd = "quarto preview"
+description = "Live-preview the site"
+
+[feature.docs.tasks.render]
+cmd = "quarto render"
+description = "Render the site to _site"
+
+# `no-default-feature = true` keeps python/pyyaml out of this environment.
+[environments]
+docs = { features = ["docs"], no-default-feature = true }

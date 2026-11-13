@@ -1,18 +1,21 @@
 ---
 title: "Ever missed Clippy? Meet Desk Pets"
-description: "I wanted a lightweight, always-on-top desktop pet that reacts to live system load. I built one in a few days, and it now has a Pomodoro timer too. Working as a great ADHD productivity aid."
+description: "I wanted a desktop pet that reacts to live system load. So I built one in a few days with a Pomodoro timer. Working as a great ADHD productivity aid."
 date: 2026-11-05
 categories: [Python coding, Project Management, Pets, Generative AI]
 image: /art/assets/img/pets_showcase.gif
 ---
 
+::: {.callout-tip appearance="simple"}
+**Want to try it or see how it works?** 
+
+[Install & use it →](https://github.com/Suyash-Naik/DeskPets/releases/download/v0.1.1/DeskPets-Setup-0.1.1.exe) · [Documentation →](https://suyashnaik.com/DeskPets/) · [How it works →](https://suyashnaik.com/DeskPets/internals/how-it-works.html) · [GitHub](https://github.com/Suyash-Naik/DeskPets)
+:::
+
+
 ## The Challenge
 
-Growing up the 90s, I didnt really enjoy Clippy (did anyone?), but it did give me the idea of adding my newly adopted mischief floofs directly on my desktop. I wanted to make it so that it was *useful*, not just cute.
-
-I am exploring hosting different sized LLMs locally and integrating them into different systems that I am developing. Running a Docker VM on my home setup turned out to be heavy. I wanted to *see* what that load was doing to my machine without opening a monitoring dashboard.
-
-Around the same time, I had two 8-month-old kittens, Layla and Chico, and I wanted them close while I worked.
+Growing up the 90s,  Clippy never really helped me. But my cats have better uptime than Microsoft (https://en.wikipedia.org/wiki/2026_Microsoft_outage), and they only go offline to nap. However, it did give me the idea of making my newly adopted mischief floofs into my virtual pets. But the real challenge is to make it *useful*, while being cute.
 
 ::: {layout-ncol=2}
 ![Chico](../art/assets/img/chico.png){fig-alt="Chico, cuddle bug supreme and mega chomper" .project-image .lightbox group="pets"}
@@ -20,39 +23,42 @@ Around the same time, I had two 8-month-old kittens, Layla and Chico, and I want
 ![Layla](../art/assets/img/layla.png){fig-alt="Layla, sneaky ninja mischief bundle" .project-image .lightbox group="pets"}
 :::
 
-That idea became **DeskPets**: **a light, modular, interactive telemetry app where my two cats tell me how my computer is feeling.**
-![DeskPets](../art/assets/img/pets_showcase.gif){fig-alt="Layla and Chico desktop pets reacting to live system load" .project-image .lightbox}
+**Look at them how can you not?** 
+
+I am exploring hosting different sized LLMs locally and integrating them into different systems that I am developing. Running a Docker VM on my home setup turned out to be heavy. I wanted to *see* what that load was doing to my machine without opening a monitoring dashboard. This became the first problem statement. 
+
+That idea is now **[DeskPets](https://github.com/Suyash-Naik/DeskPets/releases/download/v0.1.1/DeskPets-Setup-0.1.1.exe)**: **a light, modular, interactive telemetry app where my two cats tell me how my computer is feeling.**
 
 ## What I Built
 
-DeskPets (*Layla & Chico*) is a frameless, always-on-top Windows desktop pet. The cats sit on your desktop, change animation with live system load, and show a stats card when you hover over them. I built the first working version in a few days, then tested and improved it as time allowed.
+DeskPets (*Layla & Chico*) sit on your desktop changing their behaviour based on your system load. They are a light, modular, interactive telemetry app that reads CPU, RAM, swap, GPU, battery and idle time. 
 
 ::: {.stats-strip}
 ::: {.stat}
 [10]{.stat-value} [animation states]{.stat-label}
 :::
-::: {.stat}
-[45+]{.stat-value} [commits]{.stat-label}
+:::{.stat}
+[2]{.stat-value} [parallel pipelines]{.stat-label}
 :::
 ::: {.stat}
-[1.5 s]{.stat-value} [telemetry poll interval]{.stat-label}
+[7]{.stat-value} [Co-Developers (Me and Agents)]{.stat-label}
 :::
-::: {.stat}
-[0]{.stat-value} [keyboard hooks]{.stat-label}
+:::{.sat}
+[5]{.stat-value} [isolated pixi environments]{.stat-label}
 :::
 :::
 
 ![Layla and Chico reacting to live system load](../art/assets/img/pets_showcase.gif){fig-alt="Layla and Chico desktop pets reacting to live system load" .project-image .lightbox}
 
-**Telemetry-driven behaviour.** The pets read CPU, RAM, swap, GPU, battery and idle time. A calm machine gets a calm cat. Sustained high CPU gets a jumping cat. A hot GPU gets a grumpy one.
+DeskPets reads CPU, RAM, swap, GPU, battery and idle time, so a calm machine gets a calm cat, sustained high CPU gets a jumping one, and a hot GPU gets a grumpy one. Ten animation states are chosen by a **priority ladder with hysteresis and minimum dwell times rather than a pile of if-statements**. A CPU reading that bounces between 78% and 82% produces one transition instead of four, so the cats don't flicker. 
 
-**A state machine, not an if-statement.** Ten animation states are chosen by a priority ladder with hysteresis and minimum dwell times. A CPU reading bouncing between 78% and 82% produces *one* transition, not four, so the cats don't flicker.
+The app was **built to run next to heavy workloads**, which was the original point: telemetry runs on its own worker thread and shuts down cleanly in about 15 ms, and sprites are decoded with Qt alone. It is also private by design. It detects whether I'm at the keyboard with GetLastInputInfo only, with no keyboard hook. 
 
-**Privacy by design.** The app detects whether I'm at the keyboard with `GetLastInputInfo` only. There is no keyboard hook and no record of what I type.
+Because the sprites were created parallel to the code, **nothing in the code hard-codes the art**. Frame rectangles, counts, durations and loop flags all come from an atlas JSON file, so adding a new animation is a JSON change plus one config entry. If you ever wanted to **add your own pet**, you can do it without touching the code. The app is modular and extensible, so I can add new telemetry sources or new pets without rewriting anything.
 
-**Built to run next to heavy workloads.** That was the original point. Telemetry runs on its own worker thread and shuts down cleanly in about 15 ms. Sprites are decoded with Qt alone, and Pillow is deliberately not a runtime dependency.
+## How I built [DeskPets](https://suyashnaik.com/DeskPets/)
 
-**Built for changing art.** The sprites were still a work in progress, so nothing in the code hard-codes the art. Frame rectangles, counts, durations and loop flags all come from an atlas JSON file. Adding a new animation is a JSON change plus one config entry.
+
 
 ## What the Build Log Caught
 

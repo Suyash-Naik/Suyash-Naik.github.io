@@ -16,7 +16,14 @@ website:
       - text: "Home"
         href: index.qmd
 
-      - sidebar:projects
+      - text: "Projects"
+        menu:
+          - text: "All projects"
+            href: projects/index.qmd
+          - text: "Efficiency Pipeline"
+            href: projects/efficiency-pipeline.qmd
+          - text: "DeskPets"
+            href: projects/desk-pets.qmd
       - text: "CV"
         href: cv.qmd
       - text: "Art"
@@ -41,11 +48,18 @@ website:
           href: projects/index.qmd
         - text: "Efficiency Pipeline"
           href: projects/efficiency-pipeline.qmd
-        - text: "DeskPets docs"
-          href: https://suyashnaik.com/DeskPets/
+        - section: "DeskPets"
+          href: projects/desk-pets.qmd
+          contents:
+            - text: "Documentation ↗"
+              href: https://suyashnaik.com/DeskPets/
+            - text: "Getting started ↗"
+              href: https://github.com/Suyash-Naik/DeskPets/releases/download/v0.1.1/DeskPets-Setup-0.1.1.exe
+            - text: "How it works ↗"
+              href: https://suyashnaik.com/DeskPets/internals/how-it-works.html
 
   page-footer:
-    center: "© 2026 Suyash Naik · Built with [Quarto](https://quarto.org)" 
+    center: "© 2026 Suyash Naik · Built with [Quarto](https://quarto.org)"
 
 format:
   html:
