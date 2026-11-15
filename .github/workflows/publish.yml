@@ -9,12 +9,15 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: write   # commit the regenerated index.qmd
+  pages: write      # deploy to GitHub Pages
+  id-token: write   # required by actions/deploy-pages
 
-# Never run two publishes at once; a newer push supersedes an older one.
+# Never run two publishes at once. Don't cancel a deploy that is already
+# in progress (GitHub's recommendation for Pages); queue the next one instead.
 concurrency:
   group: publish-site
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   update-index:
@@ -36,11 +39,11 @@ jobs:
           commit_message: "chore: regenerate index.qmd from projects.yaml"
           file_pattern: index.qmd
 
-  publish:
+  build:
     needs: update-index
     runs-on: ubuntu-latest
     steps:
-      # Check out the branch head
+      # Check out the branch head so the
       # index.qmd commit from the previous job is included.
       - uses: actions/checkout@v4
         with:
@@ -51,10 +54,23 @@ jobs:
           pixi-version: latest
           environments: docs
 
-      - name: Configure git identity for the gh-pages commit
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Render site
+        run: pixi run -e docs quarto render
 
-      - name: Render and publish to gh-pages
-        run: pixi run -e docs quarto publish gh-pages --no-prompt --no-browser
+      - name: Upload site for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  # Deploys straight to Pages. (Pushing to a gh-pages branch with GITHUB_TOKEN
+  # does not trigger the Pages build, so the site would never update.)
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
