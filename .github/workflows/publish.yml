@@ -1,0 +1,60 @@
+name: Update index & publish site
+
+# Runs on every push to main (and manually from the Actions tab).
+# Both jobs live in one workflow because commits pushed with GITHUB_TOKEN
+# (like the regenerated index.qmd) do not trigger other workflows.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Never run two publishes at once; a newer push supersedes an older one.
+concurrency:
+  group: publish-site
+  cancel-in-progress: true
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          pixi-version: latest
+          environments: default
+
+      - name: Regenerate index.qmd from projects.yaml
+        run: pixi run update-index
+
+      - name: Commit index.qmd if it changed
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: regenerate index.qmd from projects.yaml"
+          file_pattern: index.qmd
+
+  publish:
+    needs: update-index
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the branch head
+      # index.qmd commit from the previous job is included.
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          pixi-version: latest
+          environments: docs
+
+      - name: Configure git identity for the gh-pages commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Render and publish to gh-pages
+        run: pixi run -e docs quarto publish gh-pages --no-prompt --no-browser

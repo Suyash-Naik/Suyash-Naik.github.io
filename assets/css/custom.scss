@@ -102,6 +102,12 @@ a {
   color: #fff;
   &:hover { background: darken($my-accent, 8%); color: #fff; }
 }
+.button-row p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.5rem 0 0;
+}
 
 .btn-outline {
   border: 1.5px solid $my-accent;
