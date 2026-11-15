@@ -92,7 +92,7 @@ How I built an end-to-end analysis pipeline that condensed 40 TB of PhD data int
 
 
 ::: {.project-teaser}
-### [Meet Desk Pets](https://suyashnaik.com/DeskPets/)
+### [Meet Desk Pets](projects/desk-pets.qmd)
 I wanted a desktop pet that reacts to live system load. So I built one in a few days, added a Pomodoro timer, and it has turned into a great ADHD productivity aid.
 
 ::: {.project-stats}
