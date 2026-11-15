@@ -9,7 +9,12 @@ image: art/assets/desk-pets/pets_showcase.gif
 ::: {.callout-tip appearance="simple"}
 **Want to try it or see how it works?** 
 
-[Install & use it →](https://github.com/Suyash-Naik/DeskPets/releases/download/v0.1.1/DeskPets-Setup-0.1.1.exe) · [Documentation →](https://suyashnaik.com/DeskPets/) · [How it works →](https://suyashnaik.com/DeskPets/internals/how-it-works.html) · [GitHub](https://github.com/Suyash-Naik/DeskPets)
+::: {.button-row}
+[🐈‍⬛Get it🐈 ྀི!](https://github.com/Suyash-Naik/DeskPets/releases/download/v0.1.1/DeskPets-Setup-0.1.1.exe){.btn-primary}
+[Documentation](https://suyashnaik.com/DeskPets/){.btn-outline}
+[How it works](https://suyashnaik.com/DeskPets/internals/how-it-works.html){.btn-outline}
+[Source](https://github.com/Suyash-Naik/DeskPets){.btn-outline}
+:::
 :::
 
 
@@ -96,6 +101,6 @@ Having a pet that sits with you and keeps track of time as you work makes it eas
 There's a lot I want to add to DeskPets. Next up is support for macOS to make it possible for my friends to use it. Then there will be a chat box that uses LLMs. A chat window with tools that are limited to functions. This goes back to where this all began. Learning how to run LLMs. The base part of the code that allows for changing platforms is already there. Only Windows has been set up because of differences, in how the architecture telemetry works. The full roadmap is in the [project plan](https://suyashnaik.com/DeskPets/project/roadmap.html).
 
 
-::: {.project-links}
+::: {.button-row}
 [View repository →](https://github.com/Suyash-Naik/DeskPets){.btn-outline}
 :::
