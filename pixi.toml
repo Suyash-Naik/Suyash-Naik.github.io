@@ -2,7 +2,7 @@
 authors = ["Suyash-Naik <66520562+Suyash-Naik@users.noreply.github.com>"]
 channels = ["conda-forge"]
 name = "suyashnaik.github.io"
-platforms = ["win-64"]
+platforms = ["win-64", "linux-64"]
 version = "0.1.0"
 
 [tasks]

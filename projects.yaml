@@ -1,6 +1,6 @@
 # Source of truth for the "Recent work" teasers on the homepage (index.qmd).
 # Run `pixi run update-index` after editing this file to regenerate index.qmd,
-# or just push to main — CI regenerates and commits it automatically.
+# or just push to main — CI regenerates it, commits it, and republishes the site.
 
 projects:
   - slug: efficiency-pipeline
@@ -22,5 +22,24 @@ projects:
         label: "commits"
       - value: "3"
         label: "institutions"
+      - value: "5"
+        label: "contributors"
+
+  - slug: desk-pets
+    title: "Meet Desk Pets"
+    blurb: >
+      I wanted a desktop pet that reacts to live system load. So I built one in a
+      few days, added a Pomodoro timer, and it has turned into a great ADHD
+      productivity aid.
+    link: projects/desk-pets.qmd
+    featured: true
+    order: 2
+    stats:
+      - value: "10"
+        label: "animation states"
+      - value: "2"
+        label: "parallel pipelines"
       - value: "7"
-        label: "co-authors"
+        label: "plan conflicts resolved"
+      - value: "5"
+        label: "isolated pixi environments"

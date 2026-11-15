@@ -46,7 +46,6 @@ def render_block(projects):
     )
 
     blocks = [render_teaser(p) for p in featured]
-    blocks.append('::: {.project-teaser}\n### [Incoming]\n:::')
 
     return "\n\n\n".join(blocks) + "\n\n[All projects →](projects/index.qmd)"
 
