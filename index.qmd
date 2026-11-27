@@ -10,15 +10,16 @@ toc: false
     <p class="hero-eyebrow">Hi, I'm</p>
     <h1 class="hero-name">Dr Suyash Naik</h1>
     <p class="hero-tagline">
-      I turn complex, ambiguous problems into crystal clear answers —
-      whether that's decoding how embryos self-organise or leading
-      transformational programmes.
+      I like the problems that begin messy: a difficult question, an unwieldy
+      dataset, or a group of people trying to move in the same direction.
+      My work is about creating the clarity that gets them moving.
     </p>
     <p class="hero-sub">
-      PhD Developmental Biology &amp; Biophysics· IST Austria · Image Analysis Expert
+      Developmental biophysicist &middot; Image analysis &amp; AI/ML &middot; ISTA PhD
     </p>
     <div class="hero-cta">
-      <a href="projects/index.qmd" class="btn-primary">See my work</a>
+      <a href="https://www.linkedin.com/in/suyash-naik-s167s/" class="btn-primary" target="_blank" rel="noopener">Let&rsquo;s talk</a>
+      <a href="projects/index.qmd" class="btn-outline">See my work</a>
       <a href="cv.qmd" class="btn-outline">Download CV</a>
     </div>
   </div>
@@ -32,13 +33,15 @@ toc: false
 
 ## What I do
 
-PhD in Developmental Biophysics from [IST Austria](https://ista.ac.at/en/home/) —  where I used live imaging, AI/ML driven advanced data/image analysis and quantitative modelling to understand how physical forces drive tissue organisation during embryonic development. During this work I also contributed to securing **€500K+ in competitive research funding**, and built analytical capability across **10+ early-career researchers** in microscopy, image analysis, and data science.
+I'm a scientist who turns complex technical problems into clear decisions. I excel at combining AI/ML-driven image analysis, quantitative modelling, and the ability to align specialists across teams.
 
-Since completing [my PhD](https://www.nature.com/articles/s41467-026-72366-z), I work as an **Image Analysis Expert** at ISTA, where I've **advised 500+ researchers** institute-wide on experimental design and analytical pipelines, and led the cross-functional migration of 60+ microscopy workstations across imaging, IT, and cybersecurity teams — with zero disruption to operations.
+During my PhD at [IST Austria](https://ista.ac.at/en/home/) with [Heisenberg](https://heisenberglab.pages.ist.ac.at/) and [Hannezo](https://hannezo.pages.ist.ac.at/) labs, I built image-analysis and modelling pipelines to decode noisy live-imaging data, revealing how cells' internal skeletons coordinate movement across whole embryonic tissues. The work was published in [Nature Communications](https://www.nature.com/articles/s41467-026-72366-z), helped secure €500K+ in research funding, and along the way I trained 10+ early-career researchers in microscopy and data analysis.
 
-Outside the lab I have lead [PhD Balance](https://www.phdbalance.com/) a global NGO social media team to a **25,000-strong following over five years**, and co-founded two international academic seminar series that ran 100+ sessions across four years — all without formal authority or dedicated resources.
+After completing [my PhD](https://www.nature.com/articles/s41467-026-72366-z), I worked as an **Image Analysis Expert** at ISTA. I advised **500+ researchers** on experimental design and analytical pipelines, helping people turn technical roadblocks into practical next steps. One of my favourite projects was moving 60+ microscopy workstations across imaging, IT, and cybersecurity teams with zero disruption to operations. It was a good reminder that even deeply technical work succeeds or fails on communication, trust, and attention to what people actually need.
 
-I'm drawn to environments where structured out-of-the-box thinking, clear communication, and the ability to work across disciplines create measurable impact.
+Outside the lab, I led the social-media team at [PhD Balance](https://www.phdbalance.com/), a global NGO, growing its community to **25,000 followers over five years**. I also co-founded two international academic seminar series that ran **100+ sessions across four years**—both built through shared enthusiasm rather than formal authority or dedicated resources.
+
+I&rsquo;m now exploring roles in deep-tech startups and life-science consulting, where I can bring scientific depth, practical data thinking, and a genuine enjoyment of helping teams make progress through uncertainty. If that sounds useful, [let&rsquo;s talk](https://www.linkedin.com/in/suyash-naik-s167s/).
 
 ---
 
