@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-subtitle: "Research, data work, and side projects — things I've built or contributed to. Site building is in progress!"
+subtitle: "Research, data work, and side projects — things I've built or contributed to."
 listing:
   contents: "*.qmd"
   type: grid

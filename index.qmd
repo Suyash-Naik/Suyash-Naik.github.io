@@ -10,15 +10,16 @@ toc: false
     <p class="hero-eyebrow">Hi, I'm</p>
     <h1 class="hero-name">Dr Suyash Naik</h1>
     <p class="hero-tagline">
-      I turn complex, ambiguous problems into crystal clear answers —
-      whether that's decoding how embryos self-organise or leading
-      transformational programmes.
+      I like the problems that begin messy: a difficult question, an unwieldy
+      dataset, or a group of people trying to move in the same direction.
+      My work is about creating the clarity that gets them moving.
     </p>
     <p class="hero-sub">
-      PhD Developmental Biology &amp; Biophysics· IST Austria · Image Analysis Expert
+      Developmental biophysicist &middot; Image analysis &amp; AI/ML &middot; IST Austria PhD
     </p>
     <div class="hero-cta">
-      <a href="projects/index.qmd" class="btn-primary">See my work</a>
+      <a href="mailto:suyash@suyashnaik.com" class="btn-primary">Let&rsquo;s talk</a>
+      <a href="projects/index.qmd" class="btn-outline">See my work</a>
       <a href="cv.qmd" class="btn-outline">Download CV</a>
     </div>
   </div>
@@ -32,13 +33,20 @@ toc: false
 
 ## What I do
 
-PhD in Developmental Biophysics from [IST Austria](https://ista.ac.at/en/home/) —  where I used live imaging, AI/ML driven advanced data/image analysis and quantitative modelling to understand how physical forces drive tissue organisation during embryonic development. During this work I also contributed to securing **€500K+ in competitive research funding**, and built analytical capability across **10+ early-career researchers** in microscopy, image analysis, and data science.
+I'm a scientist who turns complex technical problems into clear decisions, combining AI/ML-driven image analysis and quantitative modelling with the ability to align specialists across teams.
 
-Since completing [my PhD](https://www.nature.com/articles/s41467-026-72366-z), I work as an **Image Analysis Expert** at ISTA, where I've **advised 500+ researchers** institute-wide on experimental design and analytical pipelines, and led the cross-functional migration of 60+ microscopy workstations across imaging, IT, and cybersecurity teams — with zero disruption to operations.
+During my PhD at [IST Austria](https://ista.ac.at/en/home/) in the [Heisenberg](https://heisenberglab.pages.ist.ac.at/) and [Hannezo](https://hannezo.pages.ist.ac.at/) labs, I led a five-year project on a surprisingly open question: how do tissues move as one coordinated whole? I adapted Cellpose, a deep-learning segmentation tool, to decode 40 TB of noisy live-imaging data, built a physical model from the results, and designed an [end-to-end reproducible pipeline](projects/efficiency-pipeline.qmd) that brought together experiments and expertise across biochemistry, biophysics, and soft-matter physics from three institutions. The work, published in [Nature Communications](https://www.nature.com/articles/s41467-026-72366-z), showed how different parts of cells' internal skeletons interact to coordinate movement across embryonic tissues, with implications for wound healing, cancer, and genetic skin disorders such as epidermolysis bullosa. Along the way, it helped secure **€500K+ in research funding**, and I trained **10+ early-career researchers** in microscopy and data analysis.
 
-Outside the lab I have lead [PhD Balance](https://www.phdbalance.com/) a global NGO social media team to a **25,000-strong following over five years**, and co-founded two international academic seminar series that ran 100+ sessions across four years — all without formal authority or dedicated resources.
+After my PhD, I spent a year as IST Austria's **Image Analysis Expert**, advising **500+ researchers** on analysis pipelines and leading the zero-disruption migration of **60+ microscopy workstations** across imaging, IT, and cybersecurity teams.
 
-I'm drawn to environments where structured out-of-the-box thinking, clear communication, and the ability to work across disciplines create measurable impact.
+Outside the lab, I joined [PhD Balance](https://www.phdbalance.com/), a global volunteer network building tools and conversations around mental health in academia, during a period when I was working through my own mental-health challenges. Helping others through the same struggles turned out to be one of the things that helped me most. For two years I led its social-media team of five, setting the content strategy and running campaigns that helped grow the community to **25,000 followers**. I also co-founded two international academic seminar series that ran **100+ sessions across four years**. Both of these communities were built through shared enthusiasm rather than formal authority or dedicated resources.
+
+I&rsquo;m now looking for roles in deep-tech startups and life-science consulting, where I can help teams move from messy data and uncertainty to clear next steps.
+
+::: {.button-row}
+[Email me](mailto:suyash@suyashnaik.com){.btn-primary}
+[Connect on LinkedIn](https://www.linkedin.com/in/suyash-naik-s167s/){.btn-outline}
+:::
 
 ---
 
@@ -48,23 +56,22 @@ I'm drawn to environments where structured out-of-the-box thinking, clear commun
 
 ::: {.skill-card}
 **Quantitative analysis**
-Python · R · MATLAB · Image analysis pipelines · Statistical modelling
+Python · R · MATLAB · Image analysis pipelines · Statistical & physical modelling · Live-imaging data
 :::
 
+::: {.skill-card}
+**AI / ML**
+Deep-learning segmentation (Cellpose) · Bioimage analysis · Local LLM deployment · Agent-assisted software development
+:::
 
 ::: {.skill-card}
-**Communication**
-Science writing · Data visualisation · Teaching · PhDBalance social media  · Canva 
+**Leadership & communication**
+Cross-functional project leadership · Multi-institution collaboration · Team leadership · Science writing · Data visualisation · Teaching · PhD Balance social media · Canva
 :::
 
 ::: {.skill-card}
 **Tools**
-Git / GitLab CI · Quarto · LaTeX · Fiji/ImageJ · Napari 
-:::
-
-::: {.skill-card}
-**Wet lab**
-Live fluorescence imaging · Laser ablation · Micropipette Aspiration · Atomic force Microscopy · Zebrafish & organoid models
+Git / GitLab CI · Docker · pixi · Quarto · LaTeX · Fiji/ImageJ · Napari
 :::
 
 
@@ -84,7 +91,7 @@ How I built an end-to-end analysis pipeline that condensed 40 TB of PhD data int
 [12]{.ps-value} [figures]{.ps-label}
 [215]{.ps-value} [commits]{.ps-label}
 [3]{.ps-value} [institutions]{.ps-label}
-[5]{.ps-value} [contributors]{.ps-label}
+[7]{.ps-value} [contributors]{.ps-label}
 :::
 
 [Full case study →](projects/efficiency-pipeline.qmd){.project-case-link}
@@ -93,7 +100,7 @@ How I built an end-to-end analysis pipeline that condensed 40 TB of PhD data int
 
 ::: {.project-teaser}
 ### [Meet Desk Pets](projects/desk-pets.qmd)
-I wanted a desktop pet that reacts to live system load. So I built one in a few days, added a Pomodoro timer, and it has turned into a great ADHD productivity aid.
+I wanted a desktop pet that reacts to live system load. So I built one in a few days, added a Pomodoro timer, and it has turned into a genuinely useful focus and productivity aid.
 
 ::: {.project-stats}
 [10]{.ps-value} [animation states]{.ps-label}

@@ -22,15 +22,15 @@ projects:
         label: "commits"
       - value: "3"
         label: "institutions"
-      - value: "5"
+      - value: "7"
         label: "contributors"
 
   - slug: desk-pets
     title: "Meet Desk Pets"
     blurb: >
       I wanted a desktop pet that reacts to live system load. So I built one in a
-      few days, added a Pomodoro timer, and it has turned into a great ADHD
-      productivity aid.
+      few days, added a Pomodoro timer, and it has turned into a genuinely
+      useful focus and productivity aid.
     link: projects/desk-pets.qmd
     featured: true
     order: 2
