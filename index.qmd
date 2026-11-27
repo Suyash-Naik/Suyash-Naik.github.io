@@ -18,7 +18,7 @@ toc: false
       Developmental biophysicist &middot; Image analysis &amp; AI/ML &middot; IST Austria PhD
     </p>
     <div class="hero-cta">
-      <a href="https://www.linkedin.com/in/suyash-naik-s167s/" class="btn-primary" target="_blank" rel="noopener">Let&rsquo;s talk</a>
+      <a href="mailto:suyash@suyashnaik.com" class="btn-primary">Let&rsquo;s talk</a>
       <a href="projects/index.qmd" class="btn-outline">See my work</a>
       <a href="cv.qmd" class="btn-outline">Download CV</a>
     </div>
