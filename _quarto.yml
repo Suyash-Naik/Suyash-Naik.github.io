@@ -3,6 +3,7 @@ project:
   output-dir: _site
   resources:
     - CNAME
+  post-render: scripts/fix-sitemap.ts
 
 website:
   title: "Dr. Suyash Naik"
@@ -67,6 +68,7 @@ format:
       light: [lux, assets/css/custom.scss]
       dark: [darkly, assets/css/custom.scss]
     toc: false
+    canonical-url: true
     anchor-sections: false
     smooth-scroll: true
     grid:
