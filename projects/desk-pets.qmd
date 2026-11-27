@@ -1,6 +1,6 @@
 ---
 title: "Ever missed Clippy? Meet Desk Pets"
-description: "I wanted a desktop pet that reacts to live system load. So I built one in a few days, added a Pomodoro timer, and it has turned into a great ADHD productivity aid."
+description: "I wanted a desktop pet that reacts to live system load. So I built one in a few days, added a Pomodoro timer, and it has turned into a genuinely useful focus and productivity aid."
 date: 2026-11-05
 categories: [Python coding, Project Management, Pets, Generative AI]
 image: art/assets/desk-pets/pets_showcase.gif
